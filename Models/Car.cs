@@ -1,15 +1,21 @@
-namespace sharpList.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
-public class Car
+namespace sharpList.Models
 {
-  public int Id { get; set; }
-  public string Make { get; set; }
-  public string Model { get; set; }
-  public int? Year { get; set; }
-  public double? Price { get; set; }
-  public string Color { get; set; }
-  public string Description { get; set; }
-
-  public DateTime CreatedAt { get; set; }
-  public DateTime UpdatedAt { get; set; }
+    public class Car
+    {
+         public int Id { get; set; }
+         public string make { get; set; }
+         public string model { get; set; }
+         public int? year { get; set; }
+         public string imgUrl { get; set; }
+         public string description { get; set; }
+         public double? price { get; set; }
+         public DateTime CreatedAt { get; set; }
+         public DateTime UpdatedAt { get; set; }
+        
+    }
 }

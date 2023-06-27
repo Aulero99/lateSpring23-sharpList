@@ -105,3 +105,28 @@ SELECT * FROM cars WHERE description LIKE "%1/57%" ORDER BY price ASC LIMIT 1, 1
 
 SELECT * FROM cars WHERE id = 100;
 
+
+
+CREATE TABLE cars(
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  make VARCHAR(255) NOT NULL DEFAULT "No Make",
+  model VARCHAR(255) NOT NULL DEFAULT "No Model",
+  year INT NOT NULL DEFAULT 1990,
+  imgUrl VARCHAR(255) NOT NULL DEFAULT "https://orbis-alliance.com/wp-content/themes/consultix/images/no-image-found-360x260.png",
+  description VARCHAR(3000) NOT NULL DEFAULT "No Description",
+  price DOUBLE NOT NULL DEFAULT 100.00,
+  createdAt DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT 'Time Created',
+  updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP 
+)  default charset utf8 COMMENT '';
+
+INSERT INTO cars
+(make, model, year, price, description)
+VALUES
+("Boulder", "Rock", 2000, 500.50, "Its not a just a rock, its a Boulder!");
+
+INSERT INTO cars
+(make, model, year, price, description)
+VALUES
+("Ford", "Bronco", 2020, 3499.99, "I think this is a truck.");
+
+SELECT * FROM cars;
